@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "3130c3f7-6f2c-4a3c-b817-b9b0183a3e1d",
+		"name": "Geekonomy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16221803"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/books?offset=0&limit=10",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTExMTk3MzgsImV4cCI6MTY5MTE2MjkzOH0.JdTYcJyXWmAmz7DK14wcx7HSPucf0Xyt3iHJ4arhpvI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/books?offset=1&limit=10&sort=authors&order=1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "sort",
+							"value": "authors"
+						},
+						{
+							"key": "order",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/books/:id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTExMTk3MzgsImV4cCI6MTY5MTE2MjkzOH0.JdTYcJyXWmAmz7DK14wcx7HSPucf0Xyt3iHJ4arhpvI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/books/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/books",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTExMTk3MzgsImV4cCI6MTY5MTE2MjkzOH0.JdTYcJyXWmAmz7DK14wcx7HSPucf0Xyt3iHJ4arhpvI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Sample Book6\",\n  \"authors\": [\"Nicholas\", \"Tommy\"],\n  \"description\": \"It is one of the famous book in vintage time\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/books",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/books/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTExMTk3MzgsImV4cCI6MTY5MTE2MjkzOH0.JdTYcJyXWmAmz7DK14wcx7HSPucf0Xyt3iHJ4arhpvI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Roman Times\",\n    \"authors\": [\"Samuel\"],\n    \"description\": \"This is one of the most famous book inthe period of 90's\",\n    \"publicatiom_year\": 1990\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/books/0",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/books/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTExMTk3MzgsImV4cCI6MTY5MTE2MjkzOH0.JdTYcJyXWmAmz7DK14wcx7HSPucf0Xyt3iHJ4arhpvI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/books/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/books/search?query=Roman%20Times%20Samuel",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTExMTk3MzgsImV4cCI6MTY5MTE2MjkzOH0.JdTYcJyXWmAmz7DK14wcx7HSPucf0Xyt3iHJ4arhpvI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/books/search?query=Roman%20Times%20Samuel",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books",
+						"search"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "Roman%20Times%20Samuel"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/createAuthToken?role=admin",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTExMTk3MzgsImV4cCI6MTY5MTE2MjkzOH0.JdTYcJyXWmAmz7DK14wcx7HSPucf0Xyt3iHJ4arhpvI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/createAuthToken?role=admin",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createAuthToken"
+					],
+					"query": [
+						{
+							"key": "role",
+							"value": "admin"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
